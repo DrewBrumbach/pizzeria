@@ -3,6 +3,7 @@
 
 {% block content %}
 <p>Pizza: {{ pizza }}</p>
+<p> Available Toppings: {{linebreak}} </p>
 <ul>
     {% for topping in toppings %}
     <li>
@@ -12,5 +13,17 @@
     <li> There are no toppings available for this pizza. </li>
     {% endfor %}
 </ul>
+
+<p> Customer Reviews: </p>
+<ul>
+    {% for comment in comments %}
+    <li>
+        <p> {{comment.text | linebreaks }}</p>
+    </li>
+    {% empty %}
+    <li> No comments have been left on this pizza. </li>
+    {% endfor %}
+</ul>
+<p> <a href="{% url 'pizzas:comment' pizza.id %}">Add a new comment for this pizza!</a> </p>
 
 {% endblock content %}
