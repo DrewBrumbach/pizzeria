@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Pizza, Topping
 from .forms import CommentForm
-from django.http import Http404
+from django.http import Http404, HttpResponse
 
 # Create your views here.
 

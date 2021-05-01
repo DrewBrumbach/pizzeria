@@ -2,7 +2,21 @@
 
 
 {% block content %}
-<p>Pizzas</p>
+
+<style>
+    /* Head/Logo Title */
+    .header {
+        padding: 40px;
+        text-align: center;
+        background: #cac469;
+        color: white;
+        font-size: 30px;
+    }
+</style>
+
+<div class='header'>
+    <p>Select your delicious pizza...</p>
+</div>
 
 <ul>
     {% for pizza in pizzas %}

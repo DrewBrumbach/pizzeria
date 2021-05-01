@@ -1,7 +1,26 @@
-<a href="{% url 'pizzas:index' %}">Drew's Pizzeria </a>
-<p> {{linebreak}} </p>
-<a href="{% url 'pizzas:pizzas' %}">Order your pizza! </a>
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intitial-scale=1">
+    <style>
+        /* style of the body */
+        body {
+            font-family: Luminari, fantasy;
+            margin: 0;
+        }
 
-{% block content %}
+        .content {
+            padding: 20px
+        }
+    </style>
+</head>
 
-{% endblock content %}
+<body>
+
+    <a href="{% url 'pizzas:index' %}">Home page</a>
+    <a href="{% url 'pizzas:pizzas' %}">Order your pizza! </a>
+    <p> {{linebreak}} </p>
+
+    {% block content %}
+
+    {% endblock content %}

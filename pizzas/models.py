@@ -10,6 +10,7 @@ from django.db import models
 # Finally, when you make changes here, you must add them to the admin.py file as well.
 class Pizza(models.Model):
     text = models.CharField(max_length=200)
+    pizza_pic = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.text
